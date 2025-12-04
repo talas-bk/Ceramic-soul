@@ -1,0 +1,31 @@
+
+@use "../base/mixins.scss" as *;
+
+.title-h1-italic {
+   @include title;
+   font-style: italic;
+}
+
+.title-h2-horizontal{
+   @include title;
+}
+
+.active_title-h3 {
+   @include title;
+}
+
+.contact_title-h1{
+   @include title;
+}
+
+.works_title-h2 {
+   @include title;
+}
+
+.footer_title-h3 {
+   @include title;
+}
+
+h3,h5 {
+   @include title;
+}

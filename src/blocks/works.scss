@@ -1,0 +1,152 @@
+
+@use "../base/mixins.scss" as *;
+@use "../base/variables.scss" as *;
+
+.works {
+   margin: 60px auto 90px auto;
+
+   &__wrapper {
+    position: relative;
+   }
+     &_title-h2 {
+       font-size:clamp(26px , 5vw , 36px);
+       height: 38px;
+    }
+    &__slider {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+     .slide__nav {
+        display:none;
+    }
+
+     .swiper-slide img {
+         width: 100%;
+     }
+
+    .swiper-pagination {
+        bottom: -25px;
+    }
+
+    .swiper-pagination-bullet{
+        background-color: $dark;
+        width: 10px;
+        height: 10px;
+        border-radius: 5%;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $read;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .works {
+
+        .swiper {
+            width: 450px;
+        }
+        &__wrapper {
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .slide__nav {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 80px;
+            color: $dark;
+            cursor: pointer;
+         }
+         .icon-left-open {
+            left: 80px;
+         }
+    
+        &_title-h2 {
+            text-align: center;
+        }
+    
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .works {
+        .swiper { 
+            width: auto;
+        }
+
+        &__wrapper {
+            position: relative;
+        }
+
+        &__slider {
+           margin: 80px 40px 0 40px ;
+        }
+      
+        .slide__nav {
+            right: 13px;
+            top:50%;
+            color: $dark;
+            &::before{
+                width: auto;
+                margin: 0;
+            }
+         }
+
+        .icon-left-open {
+            left: 13px;
+        }
+        .swiper-pagination {
+        bottom: -20px;
+    }
+
+    }
+
+
+}
+
+@media screen and (min-width:1440px) {
+
+    .works {
+
+          .slide__nav {
+            right: -30px;
+            top:50%;
+            color: $dark;
+            font-size: 21px;
+         }
+        .icon-left-open {
+            left: -30px;
+        }
+
+        .swiper-pagination {
+           bottom: -30px;
+        }
+    }
+  
+}
+
+@media screen and (min-width:1920px) {
+     .works {
+
+        .container_img {
+            gap:35px;
+            img {
+                width: 400px;
+                height: 265px;
+            }
+        }
+
+     }
+}

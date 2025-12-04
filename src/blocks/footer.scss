@@ -1,0 +1,260 @@
+@use "../base/mixins.scss" as *;
+@use "../base/variables.scss"as *;
+
+
+.footer {
+    margin: 60px 0 auto 0;
+    background-color: $dark;
+    height: 817px;
+
+    .newsletter {
+        padding-top: 50px;
+        width: 293px;
+        height: 328px;
+        margin-bottom: 80px;
+
+        .footer_title-h3 {
+            color: $light;
+            text-align: start;
+            margin-bottom: 30px;
+            font-size: clamp(20px, 4vw ,40px);
+            letter-spacing: 1px;
+        }
+
+        span {
+            color: $light;
+            font-size: clamp(14px, 5vw ,16px);
+
+        }
+
+        #footerEmail {
+            margin: 20px auto 30px auto;
+            height: 32px;
+            width: 100%;
+            border-bottom: 1px solid $light;
+            background:none;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            padding: 20px 5px 20px 5px;
+            color: $light;
+        }
+    }
+
+    .footer_btn {
+        color: $light;
+        border-color: $light;
+        width: 90px;
+        height: 40px;
+        margin: 30px 0;
+        font-size: 16px;
+    }
+
+    &_menu {
+        width: 212px;
+        height: 236px;
+        margin-bottom: 40px;
+
+
+        span a {
+          color:blueviolet;
+          text-decoration: none;
+        }
+    }
+
+    #footInfo {
+        color: $light;
+        letter-spacing: 0.5px;
+        margin: 40px 0 ;
+    }
+
+    .footer_navbar {
+        display: flex;
+        flex-direction: column;
+
+        h5 {
+            color: $light;
+            text-align: start;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        a {
+            color: $light;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        span {
+            width: 150px;
+        }
+    }
+
+    .menu_container {
+        display: grid;
+        grid-template-columns: repeat(2 ,65%);
+        margin-bottom: 40px;
+
+    }
+
+  .container {
+
+       &_lastSpan {
+           font-size: 14px;
+           font-weight:400 ;
+           color: $light;
+           letter-spacing: 0.5px;
+           display: flex;
+           justify-content: center;
+           margin-top: 130px;
+       }
+    }
+}
+
+
+.footer_social {
+  
+    width: 92px;
+    height: 83px;
+    display: grid;
+
+    h5 {
+        color: $light;
+        letter-spacing: 0.5px;
+    }
+
+    span {
+        color: $light;
+        font-size: 20px;
+    }
+
+    span:hover{
+    color: rgb(140, 83, 193);
+  
+    }
+
+}
+
+
+@media  screen and (min-width:768px) {
+     .footer {
+        height: 603px;
+
+        &_menu {
+            width: 100%;
+            height: 118px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+
+            .footer_social{
+                margin-right: 20px;
+            }
+        }
+
+       .menu_container {
+            width: 428px ;
+            grid-template-columns: repeat(3,120px);
+            margin-bottom: 0;
+
+            span {
+                width: 150px;
+            }
+
+            #footInfo {
+                margin-top: 0;
+            }
+       }
+
+       .container_lastSpan {
+        margin:30px 0 40px 0 ;
+       }
+
+       .check-box {
+        gap:30px
+       }
+
+     }
+}
+
+@media screen and (min-width:1024px) {
+     .footer {
+        height: 480px;
+         .container{
+            height: 425px;
+
+            &_lastSpan {
+              margin-top: 0;
+            }
+         }
+
+        .newsletter {
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+        &_wrapper {
+         padding-top: 80px;
+         height: 425px;
+        }
+        &_menu {
+            display: inline-block;
+
+        }
+        &_wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        &_menu {
+            display: flex;
+            justify-content: space-evenly;
+
+        .footer_social{
+            margin-right: 0;
+         }
+      }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    
+    .footer {
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media screen and (min-width :1440px) {
+    .footer {
+
+        &_menu {
+            display: grid;
+            grid-template-columns: 650px 90px;
+            justify-content: end;
+        }
+    }
+    
+}
+
+@media screen and (min-width:1920px) {
+
+     .footer {
+        margin-top: 100px;
+
+        .container {
+            max-width: 1440px;
+        }
+       
+        &_menu {
+            grid-template-columns: 740px 90px;  
+        }
+
+        .menu_container {
+            width: 480px;
+            grid-template-columns: repeat(3,160px);
+          }
+     }
+}

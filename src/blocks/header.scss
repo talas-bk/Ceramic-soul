@@ -1,0 +1,214 @@
+@use "../base/variables.scss" as *;
+
+.header {
+
+    &_top {
+    display: flex;
+    justify-content: space-between;
+
+    }
+
+    &_logo {
+        width: clamp(90px , 5vw ,100px);
+        height:clamp(90px , 5vw ,100px);
+    }
+ 
+    &_icons {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+        a {
+            display: block;
+            span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: $dark;
+                font-size:17px ;
+            }
+        }
+    }
+
+    &_nav{
+        display: flex;
+        flex-direction:column;
+        justify-content: start;
+        align-items: start;
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:$veryLight;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        transition: ease-in-out 0.4s;
+
+            ul {
+            display: grid;
+            gap: 25px;
+            list-style-type: none;
+            padding: 104px 0 0 24px;
+
+            li {
+                a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $dark;
+                font-size: clamp(16px,5vw, 22px);
+                }
+                a:hover {
+                  border-bottom: 1px solid $dark;
+                }
+            }
+        }
+
+//    .btn-burger {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     height: 23px;
+//     position: absolute;
+//     top: 50px;
+//     left: 10px;
+//     cursor: pointer;
+
+//     }
+}
+
+    &_nav.open{
+        transform: translateX(0%);
+
+    }
+   
+}
+
+.burger {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+
+.btn-burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 23px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: $dark;
+        transition: ease-in-out 0.2s;
+    }
+
+         span:first-child {
+        transform: rotate(0deg);
+        position: absolute;
+        top:10%;
+        left: 0px;
+    }
+
+    span:nth-child(2) {
+        opacity: 1;
+        transition: ease-out 0.2s; 
+        position: absolute;
+        top: 50%;
+    }
+
+    span:last-child {
+        transform: rotate(0deg);
+        position:absolute;
+        top: 90%;
+        left: 0px;
+        opacity: 1;
+    }
+  
+
+}
+
+
+.hiddenBurger {
+    margin: 0;
+
+      span:first-child {
+        transform: rotate(-45deg);
+        position: absolute;
+        top:50%;
+        left: 0px;
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+        transition: ease; 
+    }
+
+    span:last-child {
+        transform: rotate(45deg);
+        position:absolute;
+        top: 50%;
+        left: 0px;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+
+    .header {
+
+        &_nav {
+            position: unset;
+            background:none;
+            display: block;
+            transform: none;
+            ul {
+                padding-top:20px;
+                display: flex;
+                padding-left: 0;
+                justify-content: center;
+                gap: 30px;
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+
+        &_link{
+             text-decoration: none;
+             color: $dark;
+             text-transform: uppercase;
+             font-size: 20px;
+             font-weight: 400;
+             font-style: normal;
+        }
+    }
+    .burger {
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    
+    .header {
+
+         &_nav {
+
+            margin-top: 40px;
+
+            ul {
+                gap: 60px;
+            }
+        }
+        &_top {
+            .header_logo {
+                width: 150px;
+                height: 151px;
+            }
+        }
+    }
+}

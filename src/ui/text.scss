@@ -1,0 +1,17 @@
+@use "../base/mixins.scss" as *;
+
+
+.text-paraph {
+    @include text;
+    font-size: 16px;
+}
+
+
+label {
+   @include info-text;
+   
+}
+
+input::placeholder {
+    @include info-text;
+}

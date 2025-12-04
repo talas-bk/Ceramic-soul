@@ -1,0 +1,139 @@
+
+@use "../base/variables.scss"as * ;
+
+.cards {
+     margin: 0 auto;
+    .container {
+        justify-content: center;
+        display: grid;
+
+    }
+    &_item {
+        width:100%;
+        border-radius: 3px;
+        border: 0.5px solid $dark;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        transform: scale(1);
+        transition: .5s;
+
+        p {
+           display:flex;
+           flex-direction: column;
+           gap:7px;
+           padding: 10px;
+           font-size: clamp(16px ,4vw ,20px);
+        }
+    }
+    &_wrapper {
+        display:grid;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .cards {
+
+        &_wrapper {
+            grid-template-columns: repeat(2,330px);
+            gap: 30px;
+            padding: 10px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 1.5px;
+                background-color: $dark;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0.8px;
+                height: 200px;
+                background-color: $dark;
+
+            }
+        }
+
+
+
+      &_item:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.25);
+     }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .cards {
+    
+        &_wrapper {
+            padding: 20px;
+            gap: 30px;
+            grid-template-columns:auto auto auto;
+        }
+
+        &_item {
+            width: 250px;
+        }
+        &_item:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    
+    .cards {
+        
+        .container {
+            padding: 20px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        &_wrapper {
+            gap: 35px;
+        }
+        &_item {
+            width: 340px;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    .cards {
+
+        &_wrapper {
+            column-gap: 55px;
+        }
+     
+    }
+    
+}
+
+@media  screen and (min-width:1920px) {
+    
+    .cards {
+
+        .container {
+            max-width: 1440px;
+            justify-content:start;
+        }
+        &_wrapper {
+            grid-template-columns: auto auto auto auto;
+            column-gap: 83px;
+        }
+
+        &_item {
+            width: 285px;
+        }
+    }
+}

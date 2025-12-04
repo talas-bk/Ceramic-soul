@@ -1,0 +1,103 @@
+
+@use "../base/variables.scss" as *;
+
+
+// Catalog
+.homeCatalog { 
+
+       padding-top: 50px;
+       margin: 0 auto 50px;
+
+    &_wrapper {
+        margin-top: 40px;
+        display: grid;
+        align-items: center;
+        gap:40px;
+    }
+
+    &_title {
+       font-size:clamp(22px, 5vw ,36px);
+    }
+
+    &_menu-link {
+        width:100%;
+        border:1px solid $dark;
+        ul {
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                text-transform: uppercase;
+                a {
+                    text-decoration: none;
+                    color: $dark;
+                    font-weight: 500;
+                    font-size:clamp(10px ,4vw ,20px);
+
+                }
+                a:hover{
+                    border-bottom: 1px solid $dark;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .homeCatalog {
+
+       &_menu-link {
+         width:460px;
+         height: 50px;
+        ul {
+            display: flex;
+            justify-content:space-around;
+        }
+
+       }
+
+       &_wrapper {
+            margin-top: 60px;
+            gap: 60px;
+       }
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    
+    .homeCatalog {
+
+        .container {
+            margin: 0 auto;
+            max-width: 1140px;
+        }
+      
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    .homeCatalog {
+
+        .container {
+            max-width: 1240px;
+    }
+
+}
+}
+
+@media screen and (min-width:1920px) {
+    .homeCatalog {
+
+        .container {
+            margin: 0 auto;
+            max-width: 1440px;
+        }
+    }
+}

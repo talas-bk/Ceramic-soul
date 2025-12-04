@@ -1,0 +1,37 @@
+@use "../base/variables.scss" as *;
+
+@mixin title {
+    color: $dark;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+@mixin button {
+    border:1px solid $dark;
+    text-align: center;
+    color: $dark;
+    border-radius:2px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
+    background-color: transparent;
+}
+
+@mixin text {
+font-weight: 400;
+font-style: normal;
+
+}
+
+@mixin info-text {
+    font-family:inherit, sans-serif ;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 28px;
+}

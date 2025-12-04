@@ -1,0 +1,30 @@
+@use "modern-normalize.min.css";
+@use "fontello.css";
+@use "../base/variables.scss" as *;
+@use "../sass/pxtorem.scss";
+@use "../base/basic.scss";
+@use "../base/animation.scss";
+
+// home page
+@use "../blocks/promo.scss";
+@use "../blocks/header.scss";
+@use "../blocks/active.scss";
+@use "../blocks/contact.scss";
+@use "../blocks/works.scss";
+@use "../blocks/footer.scss";
+
+// catalog page
+@use "../blocks/homeCatalog.scss";
+@use "../blocks/cards.scss";
+
+// about page
+@use "../blocks/about.scss";
+
+// blog page 
+@use "../blocks/blog.scss";
+
+@use "../ui/titles.scss";
+@use "../ui/buttons.scss";
+@use "../ui/text.scss";
+
+
