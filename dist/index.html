@@ -6,40 +6,65 @@
 		<meta name="description" content="Website for Ceramic soul brand" />
 		<meta name="author" content="Awesome student" />
 		<title>Ceramic soul</title>
-		<link rel="icon" type="image/x-icon" href="/assets/favicon-A_W1hML8.ico" />
+		<link rel="icon" type="image/x-icon" href="/Ceramic_soul/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
 		<link
 			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
 			rel="stylesheet"/>
-		<script type="module" crossorigin src="/assets/script-v7D7q2Ul.js"></script>
-		<link rel="stylesheet" crossorigin href="/assets/script-DSJTXpfi.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+         <!-- Primary Meta Tags -->
+<title>Meta Tags — Preview, Edit and Generate</title>
+<meta name="title" content="Meta Tags — Preview, Edit and Generate" />
+<meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, X and more!" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://metatags.io/" />
+<meta property="og:title" content="Meta Tags — Preview, Edit and Generate" />
+<meta property="og:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, X and more!" />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- X (Twitter) -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://metatags.io/" />
+<meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate" />
+<meta property="twitter:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, X and more!" />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+
+		<script type="module" crossorigin src="/assets/script-DYPba8C2.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/script-B1FdCde1.css">
 	</head>
 	<body>
-		<section class="promo">
+       <div class="overlay remove"></div>
+		<section class="promo ">
 			<img src="/assets/potter-Dgq44G72.jpg" alt="potter" title="potter" class="promo_potter">
 			 <div class="container">
 				 <div class="header">
                    <div class="header_top">
-
-					<div class="burger">
+				   <div class="header_icons">
+					  <a href="#"><span class="icon-shopping-bag"></span></a>
+					  <a href="#"><span class="icon-search"></span></a>
+				    </div>
+					<a href="#" class="header_logo"><img src="/assets/logo-CiQoG76i.png" alt="logo"></a>
+				  <div class="burger">
+						<div class="btn-burger hidden">
+						   <span></span><span></span><span></span>
+						</div> 
+					</div>
+			 </div>
+			  <nav class="header_nav hidden">
+				<div class="burger" id="nav-btn">
 						<div class="btn-burger">
 						   <span></span><span></span><span></span>
-						</div>
+						</div> 
 					</div>
-
-					<a href="#" class="header_logo"><img src="/assets/logo-CiQoG76i.png" alt="logo"></a>
-				<div class="header_icons">
-					<a href="#"><span class="icon-search"></span></a>
-					<a href="#"><span class="icon-shopping-bag"></span></a>
-				</div>
-			 </div>
-			  <nav class="header_nav">
 				<ul> 
 					<li><a href="catalog.html" class="header_link">Catalog</a></li>
-					<li><a href="blog.html" class="header_link">Blog</a></li>
-					<li><a href="about.html" class="header_link">About</a></li>
+					<li><a href="about.html" class="header_link">about</a></li>
+					<li><a href="blog.html" class="header_link">blog</a></li>
 				</ul>
 			  </nav>
 			</div>
@@ -68,7 +93,7 @@
 
 		   <div class="active_boxes">
             <h3 class="active_title-h3">our workshop</h3>
-			<img src="/src/img/about/ceramic.jpg " class="active_img" title="ceo">
+			<img src="/assets/ceramic-Bgx1feVJ.jpg" class="active_img" title="ceo">
 			<p class="text-paraph active_text">At <span class="active_paraph">Ceramic Soul</span> workshop, we don’t just craft ceramics—we invite you to get hands-on and create your own unique pieces. Through our engaging masterclasses, you’ll learn traditional techniques, work with natural materials, and experience the joy of shaping clay into something truly personal.</p>
          </div>
 		</div>
@@ -123,19 +148,30 @@
 	<section class="works" >
 		<div class="container">
 			<h2 class="works_title-h2">check out our works</h2>
-		 <div class="container_img">
-			<span class="icon-left-open"></span>
-			<img src="/assets/tea-3-ILJqlmY_.jpg" alt="workTea">
-			<img src="/assets/tea-2-CiZGhhkc.jpg" alt="workTea">
-			<img src="/assets/tea-1-vKMOH0_y.jpg" alt="workTea">
-			<span class="icon-right-open"></span>
-		 </div>
 
-		 <div class="works-dots">
-			 <span></span><span></span><span></span><span></span>
+	<div class="works__wrapper">
+	   <div class="swiper works__slider">
+		 <div class="swiper-wrapper">
+		  <div class="swiper-slide">
+	  	  <img src="/assets/tea-1-vKMOH0_y.jpg">
+	   	   </div>
+		  <div class="swiper-slide">
+	  	   <img src="/assets/tea-2-CiZGhhkc.jpg">
+	   	   </div>
+		  <div class="swiper-slide">
+	  	    <img src="/assets/tea-3-ILJqlmY_.jpg">
+	   	   </div>
+		  <div class="swiper-slide">
+	  	    <img src="/assets/tea-2-CiZGhhkc.jpg">
+	   	   </div>
 		 </div>
-	  </div>
-	</section>
+		 </div>
+		 <span class="icon-left-open  slide__nav"></span>
+		 <span class="icon-right-open slide__nav"></span>
+		 <div class="swiper-pagination"></div>
+	    </div>	
+  </div>
+</section>
 		
 
 	<section class="footer">
@@ -155,11 +191,11 @@
 			
 			<div class="footer_menu">
 			  <div class="menu_container">
-									<nav class="footer_navbar">
+							    	<nav class="footer_navbar">
 										<h5>Discover</h5>
 										<a href="about.html">About us</a><br>
 										<a href="blog.html">Blog</a>
-								 </nav>
+							     </nav>
 
 				  <nav class="footer_navbar">
 				    <h5>Shopping</h5>
@@ -185,6 +221,6 @@
 		  </div>
 			 <span class="container_lastSpan">© Copyright 2025, Nextbit</span>
 		 </div>
-	</section>
+	</section>
 	</body>
 </html>

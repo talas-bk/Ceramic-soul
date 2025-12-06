@@ -24,7 +24,12 @@
         span {
             color: $light;
             font-size: clamp(14px, 5vw ,16px);
+        }
 
+        .check-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         #footerEmail {

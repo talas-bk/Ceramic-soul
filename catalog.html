@@ -12,32 +12,39 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
 			rel="stylesheet"/>
+		 <link href="src/sass/style.css" rel="stylesheet">
+
 	</head>
 	<body>
+    <div class="overlay remove"></div>
      <section class="homeCatalog">
 		<article class="container">
-			<div class="header">
-				<div class="header_top">
-					<div class="burger">
+			 <div class="header">
+                   <div class="header_top">
+				   <div class="header_icons">
+					  <a href="#"><span class="icon-shopping-bag"></span></a>
+					  <a href="#"><span class="icon-search"></span></a>
+				    </div>
+					<a href="#" class="header_logo"><img src="./src/logo/logo.png" alt="logo"></a>
+				  <div class="burger">
+						<div class="btn-burger hidden">
+						   <span></span><span></span><span></span>
+						</div> 
+					</div>
+			 </div>
+			  <nav class="header_nav hidden">
+				  <div class="burger" id="nav-btn">
 						<div class="btn-burger">
-							<span></span><span></span><span></span>
-						</div>
+						   <span></span><span></span><span></span>
+						</div> 
 					</div>
-					    <a href="#" class="header_logo"><img src="/src/logo/logo.png" alt="logo"></a>
-					<div class="header_icons">
-						<a href="#"><span class="icon-search"></span></a>
-						<a href="#"><span class="icon-shopping-bag"></span></a>
-					</div>
-				</div>
-				<nav class="header_nav closed">
-					<ul> 
-						<li><a href="index.html" class="header_link">Home</a></li>
-						<li><a href="blog.html" class="header_link">Blog</a></li>
-						<li><a href="about.html" class="header_link">About</a></li>
-					</ul>
-				</nav>
+				<ul> 
+					<li><a href="index.html" class="header_link">home</a></li>
+					<li><a href="about.html" class="header_link">about</a></li>
+					<li><a href="blog.html" class="header_link">blog</a></li>
+				</ul>
+			  </nav>
 			</div>
-
                <div class="homeCatalog_wrapper">
 				 <h1 class="title-h2-horizontal homeCatalog_title">Our property</h1>
                    
@@ -142,7 +149,7 @@
 			 <span class="container_lastSpan">© Copyright 2025, Nextbit</span>
 		 </div>
 	</section>
-
 		<script type="module" src="/src/js/script.js"></script>
+        <div class="overlay hidden"></div>
 	</body>
 </html>

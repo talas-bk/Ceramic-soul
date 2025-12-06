@@ -13,29 +13,35 @@
 		 <link href="src/sass/style.css" rel="stylesheet">
 </head>
 <body>
-
+    <div class="overlay remove"></div>
 	 <section class="blog mt-7 mb-10">
 		<article class="container">
 			<div class="header">
-				<div class="header_top">
-					<div class="burger">
+			  <div class="header">
+                <div class="header_top">
+				   <div class="header_icons">
+					  <a href="#"><span class="icon-shopping-bag"></span></a>
+					  <a href="#"><span class="icon-search"></span></a>
+				    </div>
+					<a href="#" class="header_logo"><img src="./src/logo/logo.png" alt="logo"></a>
+				  <div class="burger">
+						<div class="btn-burger hidden">
+						   <span></span><span></span><span></span>
+						</div> 
+					</div>
+			 </div>
+			  <nav class="header_nav hidden">
+				 <div class="burger" id="nav-btn">
 						<div class="btn-burger">
-							<span></span><span></span><span></span>
-						</div>
+						   <span></span><span></span><span></span>
+						</div> 
 					</div>
-					    <a href="#" class="header_logo"><img src="/src/logo/logo.png" alt="logo"></a>
-					<div class="header_icons">
-						<a href="#"><span class="icon-search"></span></a>
-						<a href="#"><span class="icon-shopping-bag"></span></a>
-					</div>
-				</div>
-				<nav class="header_nav closed">
-					<ul> 
-						<li><a href="index.html" class="header_link">Home</a></li>
-						<li><a href="blog.html" class="header_link">Blog</a></li>
-						<li><a href="about.html" class="header_link">About</a></li>
-					</ul>
-				</nav>
+				<ul> 
+					<li><a href="index.html" class="header_link">home</a></li>
+					<li><a href="about.html" class="header_link">about</a></li>
+					<li><a href="catalog.html" class="header_link">catalog</a></li>
+				</ul>
+			  </nav>
 			</div>
 
 		 <h1 class="blog__title">our digital notes</h1>
@@ -114,7 +120,6 @@
 			 <span class="container_lastSpan">© Copyright 2025, Nextbit</span>
 		 </div>
 	</section>
-
 	<script type="module" src="/src/js/script.js"></script>
 </body>
 </html>

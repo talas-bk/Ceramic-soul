@@ -3,6 +3,14 @@
 
 .about {
 
+   .header_nav {
+        height: 40%;
+
+        ul{
+            padding: 45px 0px 0 0px;
+        }
+   }
+
     padding-top:50px ;
 
     &_wrapper {
@@ -63,7 +71,15 @@
 
 @media screen and (min-width:768px) {
      
-    .about {
+.about {
+
+    .header_nav{
+        position: unset;
+
+        ul {
+            padding: 0;
+        }
+    }
 
         &_wrapper {
             margin-top: 60px;

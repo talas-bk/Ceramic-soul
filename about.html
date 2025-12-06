@@ -12,37 +12,45 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
 			rel="stylesheet"/>
+		 <link href="src/sass/style.css" rel="stylesheet">
+
 	</head>
-	<body>
+	<body> 
+		<div class="overlay remove"></div>
      <section class="about">
 		<article class="container">
 			<div class="header">
-				<div class="header_top">
-					<div class="burger">
+                <div class="header_top">
+				   <div class="header_icons">
+					  <a href="#"><span class="icon-shopping-bag"></span></a>
+					  <a href="#"><span class="icon-search"></span></a>
+				    </div>
+					<a href="#" class="header_logo"><img src="./src/logo/logo.png" alt="logo"></a>
+				  <div class="burger">
+						<div class="btn-burger hidden">
+						   <span></span><span></span><span></span>
+						</div> 
+					</div>
+			 </div>
+			  <nav class="header_nav hidden">
+				 <div class="burger" id="nav-btn">
 						<div class="btn-burger">
-							<span></span><span></span><span></span>
-						</div>
+						   <span></span><span></span><span></span>
+						</div> 
 					</div>
-					    <a href="#" class="header_logo"><img src="/src/logo/logo.png" alt="logo"></a>
-					<div class="header_icons">
-						<a href="#"><span class="icon-search"></span></a>
-						<a href="#"><span class="icon-shopping-bag"></span></a>
-					</div>
-				</div>
-				<nav class="header_nav closed">
-					<ul> 
-						<li><a href="index.html" class="header_link">Home</a></li>
-						<li><a href="blog.html" class="header_link">Blog</a></li>
-						<li><a href="catalog.html" class="header_link">Catalog</a></li>
-					</ul>
-				</nav>
+				<ul> 
+					<li><a href="catalog.html" class="header_link">Catalog</a></li>
+					<li><a href="index.html" class="header_link">home</a></li>
+					<li><a href="blog.html" class="header_link">blog</a></li>
+				</ul>
+			  </nav>
 			</div>
 
                <div class="about_wrapper">
 				 <h1 class="title-h2-horizontal about_title">where it all began</h1>
 
                    <div class="about_beganBio">
-                       <img src="/src/img/about/crafts-1.jpg" alt="beganImg">
+                       <img src="/src/img/about/crafts.jpg" alt="beganImg">
 
                         <div class="textBio">
                           <p> Our small pottery workshop began as a simple passion project, rooted in a love for handmade artistry and traditional craftsmanship. What started with a single wheel and a few lumps of clay has grown into a cozy creative space where ideas take shape and stories are told through every piece. Inspired by timeless techniques and the beauty of natural materials, we’ve built a place where both beginners and experienced artists can come together, share their skills, and celebrate the art of pottery. Each creation reflects our journey—shaped by hand, fired with care, and made to be cherished.</p>
@@ -156,7 +164,6 @@
 			 <span class="container_lastSpan">© Copyright 2025, Nextbit</span>
 		 </div>
 	</section>
-
         <script type="module" src="/src/js/script.js"></script>
     </body>
 </html>

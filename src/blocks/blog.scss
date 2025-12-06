@@ -1,28 +1,39 @@
-@use "../base/variables.scss" as * ;
+@use "../base/variables.scss" as *;
 @use "../base/mixins.scss";
 
 .blog {
-     &__text {
-        letter-spacing:clamp(0.5px ,5vw, 0px);
-     }
 
-     &__text-h3 {
-        text-align: left;
-        font-weight:500;
-        font-size: clamp(16px, 5vw ,20px);
-     }
+  .header_nav {
+    height: 40%;
+
+    ul {
+      padding: 45px 0px 0 0px;
+    }
+  }
+
+  &__text {
+    letter-spacing: clamp(0.5px, 5vw, 0px);
+  }
+
+  &__text-h3 {
+    text-align: left;
+    font-weight: 500;
+    font-size: clamp(16px, 5vw, 20px);
+  }
 
   &__title {
-     text-align:center;
-     font-size:clamp(22px, 5vw ,28px);
-     text-transform: uppercase;
-     margin: 40px;
+    text-align: center;
+    font-size: clamp(22px, 5vw, 28px);
+    text-transform: uppercase;
+    margin: 40px;
   }
 
   &__img {
-      max-inline-size:calc(100% + 2px);
-      transform: translateX(-1px) translateY(-1px);
+    width: calc(100% + 2px);
+    max-inline-size: calc(100% + 2px);
+    transform: translateX(-1px) translateY(-1px);
   }
+
 }
 
 @media screen and (min-width:768px) {
@@ -30,35 +41,37 @@
   .blog {
 
     &__title {
-        margin: 60px;
+      margin: 60px;
     }
 
     &__img {
-      max-inline-size: calc(335px + 2px);
+      width: calc(335px + 2px);
       transform: translateX(-1px) translateY(-1px);
     }
 
     &__wrapper {
-        padding: 25px;
-        position: relative;
-        &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 200px;
-                height: 1px;
-                background-color: $dark;
-            }
-        &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 1px;
-                height: 200px;
-                background-color: $dark;
-            }
+      padding: 25px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 1px;
+        background-color: $dark;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 200px;
+        background-color: $dark;
+      }
     }
   }
 }
@@ -66,73 +79,111 @@
 
 @media screen and (min-width:1024px) {
 
-    .blog {
-        &__wrapper {
-            padding:25px 25px 0 25px;
-        }
-        &__img {
-          width: 246px;
-          height: 200px;
-        }
-
-      &__notes {
-        transition:.5s;
-        transform: scale(1);
-      }
-      &__notes:hover {
-         transform:scale(1.03);
-      }
+  .blog {
+    &__wrapper {
+      padding: 25px 25px 0 25px;
     }
-    
+
+    &__img {
+      width: 246px;
+      height: 200px;
+    }
+
+    &__notes {
+      transition: .5s;
+      transform: scale(1);
+    }
+
+    &__notes:hover {
+      transform: scale(1.03);
+    }
+  }
+
 }
 
 @media screen and (min-width:1200px) {
-  
+
   .blog {
 
     &__wrapper {
       flex-wrap: nowrap;
     }
+
     &__notes {
-       width: 520px;
-       height: 394px;
-       transition: .5s;
-       transform: scale(1);
+      width: 520px;
+      height: 394px;
+      transition: .5s;
+      transform: scale(1);
     }
 
     &__notes:hover {
-      transform:scale(1.05);
+      transform: scale(1.05);
     }
+
     &__container {
-       .blog__img {
+      .blog__img {
         width: 260px;
         height: 240px;
-       }
+      }
     }
   }
 }
 
 @media screen and (min-width:1440px) {
-  
+
   .blog {
 
+    .container {
+      min-width: 1300px;
+    }
+
     &__notes {
-      width:600px;
+      width: 600px;
     }
 
   }
-  
+
 }
 
-@media screen and (min-width:1900px) {
+@media screen and (min-width:1920px) {
   .blog {
 
-     &__container {
-       .blog__img {
+    .container {
+      min-width: 1600px;
+    }
+
+    &__container {
+      .blog__img {
         width: 335px;
         height: 240px;
-       }
+      }
     }
+
+    &__wrapper {
+      padding-top: 25px;
+      justify-content: space-around;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 200px;
+        height: 1px;
+        background-color: $dark;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 1px;
+        height: 200px;
+        background-color: $dark;
+      }
+    }
+
     &__notes {
       width: 670px;
       height: 375px;
@@ -140,7 +191,7 @@
     }
 
     &__notes:hover {
-      transform:scale(1.03);
+      transform: scale(1.03);
     }
   }
 }

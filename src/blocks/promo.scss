@@ -3,19 +3,33 @@
 
 .promo {
 
+ .header_nav {
+    height: 40%;
+
+    ul {
+      padding: 45px 0px 0 0px;
+    }
+  }
+
     position: relative;
     padding-top: 50px;
 
     &_wrapper {
         margin-top: 50px;
     }
+
     &_title {
         padding-inline: 5px;
-        font-size: clamp(18px, 5vw , 24px);
+        animation: slideUp 1.2s;
+        font-size: clamp(18px, 5vw, 24px);
     }
+
     &_cta {
-        margin: 40px 0 ;
+        margin: 40px 0;
+        animation: slideIn 1.5s;
+
     }
+
     &_img {
         margin: 0 auto;
         width: 270px;
@@ -24,65 +38,76 @@
     }
 
     &_btn {
-        margin:18px auto 0 auto;
+        margin: 18px auto 0 auto;
     }
 
-    &_potter{
+    &_potter {
         display: none;
     }
 }
 
-@media  screen and (min-width:768px) {
+@media screen and (min-width:768px) {
 
     .promo {
+        .header_nav {
+            position: unset;
+        }
+
         .container {
             padding: 0 24px;
         }
+
         &_wrapper {
             display: flex;
             justify-content: space-between;
         }
+
         &_cta {
-          margin-top: 0;
-          animation: slideIn 2s ;
+            margin-top: 0;
+            animation: slideIn 2s;
         }
+
         &_img {
-           width: 270px;
-           height: 377px;
+            width: 270px;
+            height: 377px;
         }
+
         &_title.title-h1-italic {
-          padding-top: 300px;
-          padding-left: 41px;
-          text-align: left;
-          animation: slideUp 1.5s;
+            padding-top: 300px;
+            padding-left: 41px;
+            text-align: left;
+            animation: slideUp 1.5s;
         }
-      &_potter {
-        display: none;
-      }
+
+        &_potter {
+            display: none;
+        }
     }
-    
+
 }
 
-@media screen  and (min-width:1200px){
+@media screen and (min-width:1200px) {
     .promo {
         .container {
             padding: 0;
         }
+
         &_potter {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
-            width: 450px ;
+            width: 450px;
             height: 633px;
         }
-   
+
     }
-    
+
 }
 
 @media screen and (min-width:1024px) {
     .promo {
+
         // &_wrapper {
         //     display: grid;
         //     grid-template-columns: auto 270px;
@@ -96,6 +121,7 @@
         &_wrapper {
             justify-content: space-around;
         }
+
         &_title.title-h1-italic {
             padding-left: 0;
             padding-right: 0;
@@ -103,15 +129,17 @@
     }
 }
 
-@media  screen and (min-width:1200px) {
+@media screen and (min-width:1200px) {
 
     .promo {
         &_wrapper {
             justify-content: end;
         }
+
         &_title.title-h1-italic {
             padding-right: 20px;
         }
+
         &_potter {
             width: clamp(450px, 35vw, 640px);
             object-fit: cover;
@@ -122,37 +150,40 @@
 
 @media screen and (min-width:1440px) {
     .promo {
-       &_wrapper {
-        display: grid;
-        grid-template-columns: auto 290px;
-        justify-content: end;
-       }
-       &_title.title-h1-italic {
-        padding-right: 40px;
-       }
-       &_potter {
+        &_wrapper {
+            display: grid;
+            grid-template-columns: auto 290px;
+            justify-content: end;
+        }
+
+        &_title.title-h1-italic {
+            padding-right: 40px;
+        }
+
+        &_potter {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
-            width: 500px ;
+            width: 500px;
             height: 773px;
-       }
+        }
+
         &_img {
-        width: 330px;
-        height: 400px;
-    }
+            width: 330px;
+            height: 400px;
+        }
     }
 }
 
 @media screen and (min-width:1920px) {
-    
+
     .promo {
         &_potter {
             width: 640px;
             height: 900px;
         }
-        
+
         &_img {
             height: 460px;
         }
@@ -160,12 +191,11 @@
         &_btn {
             margin: 50px auto 0 auto;
         }
+
         &_title.title-h1-italic {
-          padding-top: 390px;
-          padding-right: 51px;
-          text-align: left;
-     }
-  }
+            padding-top: 390px;
+            padding-right: 51px;
+            text-align: left;
+        }
+    }
 }
-
-

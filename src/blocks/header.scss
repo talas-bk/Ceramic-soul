@@ -3,87 +3,133 @@
 .header {
 
     &_top {
-    display: flex;
-    justify-content: space-between;
-
+        display: flex;
+        justify-content: space-between;
     }
 
     &_logo {
-        width: clamp(90px , 5vw ,100px);
-        height:clamp(90px , 5vw ,100px);
+        width: clamp(90px, 5vw, 100px);
+        height: clamp(90px, 5vw, 100px);
     }
- 
+
     &_icons {
         display: flex;
         align-items: start;
         gap: 15px;
+
         a {
             display: block;
+
             span {
                 display: block;
                 width: 20px;
                 height: 20px;
                 color: $dark;
-                font-size:17px ;
+                font-size: 17px;
             }
         }
     }
 
-    &_nav{
+    .icon-search {
+        transform: scaleX(-1);
+    }
+
+    &_nav.hidden {
+        opacity: 0.4;
+        transform: translatey(-100%);
+        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3)
+    }
+
+    &_nav {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: start;
-        align-items: start;
-        position:absolute;
-        top:0;
-        left: 0;
+        position: absolute;
+        position: fixed;
+        top: 0px;
+        right: 0;
         width: 100%;
-        height: 100%;
-        background-color:$veryLight;
-        border-radius: 5px;
-        transform: translateX(-100%);
-        transition: ease-in-out 0.4s;
+        height: 40%;
+        background-color: $light;
+        border-radius: 0 0 10px 10px;
+        transition: ease-in-out 0.3s;
+        transform: translatey(0%);
+        opacity: 1;
+        z-index: 3;
 
-            ul {
-            display: grid;
-            gap: 25px;
-            list-style-type: none;
-            padding: 104px 0 0 24px;
 
-            li {
-                a {
+        .burger {
+            position: relative;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+            z-index: 1;
+        }
+
+        .btn-burger {
+            display: flex;
+            position: fixed;
+            top: 40px;
+            right: 15px;
+
+            span {
+                display: block;
+                width: 20px;
+                height: 1px;
+                background-color: $dark;
+                transition: ease-in-out 0.1s;
+            }
+
+            span:first-child {
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 50%;
+                left: 0px;
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+                transition: ease;
+            }
+
+            span:last-child {
+                transform: rotate(45deg);
+                position: absolute;
+                top: 50%;
+                left: 0px;
+            }
+
+        }
+
+    }
+
+    ul {
+        display: grid;
+        justify-items: center;
+        gap: 25px;
+        list-style-type: none;
+        padding: 45px 0px 0 0px;
+
+        li {
+            a {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $dark;
-                font-size: clamp(16px,5vw, 22px);
-                }
-                a:hover {
-                  border-bottom: 1px solid $dark;
-                }
+                font-size: clamp(16px, 5vw, 22px);
+            }
+
+            a:hover {
+                border-bottom: 1px solid $dark;
             }
         }
-
-//    .btn-burger {
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     height: 23px;
-//     position: absolute;
-//     top: 50px;
-//     left: 10px;
-//     cursor: pointer;
-
-//     }
-}
-
-    &_nav.open{
-        transform: translateX(0%);
-
     }
-   
+
 }
 
 .burger {
+    position: relative;
+    cursor: pointer;
     width: 20px;
     height: 20px;
     margin-right: 20px;
@@ -92,10 +138,11 @@
 
 
 .btn-burger {
-    position: relative;
     display: flex;
+    position: absolute;
     flex-direction: column;
     height: 23px;
+    margin-right: 20px;
     cursor: pointer;
 
     span {
@@ -103,55 +150,54 @@
         width: 20px;
         height: 1px;
         background-color: $dark;
-        transition: ease-in-out 0.2s;
+        transition: ease-in-out 0.1s;
     }
 
-         span:first-child {
-        transform: rotate(0deg);
-        position: absolute;
-        top:10%;
-        left: 0px;
-    }
-
-    span:nth-child(2) {
-        opacity: 1;
-        transition: ease-out 0.2s; 
-        position: absolute;
-        top: 50%;
-    }
-
-    span:last-child {
-        transform: rotate(0deg);
-        position:absolute;
-        top: 90%;
-        left: 0px;
-        opacity: 1;
-    }
-  
-
-}
-
-
-.hiddenBurger {
-    margin: 0;
-
-      span:first-child {
+    span:first-child {
         transform: rotate(-45deg);
         position: absolute;
-        top:50%;
+        top: 50%;
         left: 0px;
     }
 
     span:nth-child(2) {
         opacity: 0;
-        transition: ease; 
+        transition: ease;
     }
 
     span:last-child {
         transform: rotate(45deg);
-        position:absolute;
+        position: absolute;
         top: 50%;
         left: 0px;
+    }
+
+}
+
+
+.btn-burger.hidden {
+    margin: 0;
+
+    span:first-child {
+        transform: rotate(0deg);
+        position: absolute;
+        top: 10%;
+        left: 0px;
+    }
+
+    span:nth-child(2) {
+        opacity: 1;
+        transition: ease-out 0.1s;
+        position: absolute;
+        top: 50%;
+    }
+
+    span:last-child {
+        transform: rotate(0deg);
+        position: absolute;
+        top: 90%;
+        left: 0px;
+        opacity: 1;
     }
 }
 
@@ -159,14 +205,22 @@
 @media screen and (min-width:768px) {
 
     .header {
+    
+        &_nav.hidden {
+            opacity: 1;
+            transform: translatey(0%);
+            box-shadow: none;
+        }
 
         &_nav {
             position: unset;
-            background:none;
+            background: none;
             display: block;
             transform: none;
+            box-shadow: none;
+
             ul {
-                padding-top:20px;
+                padding-top: 20px;
                 display: flex;
                 padding-left: 0;
                 justify-content: center;
@@ -178,25 +232,26 @@
             }
         }
 
-        &_link{
-             text-decoration: none;
-             color: $dark;
-             text-transform: uppercase;
-             font-size: 20px;
-             font-weight: 400;
-             font-style: normal;
+        &_link {
+            text-decoration: none;
+            color: $dark;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 400;
+            font-style: normal;
         }
     }
+
     .burger {
         visibility: hidden;
     }
 }
 
 @media screen and (min-width:1440px) {
-    
+
     .header {
 
-         &_nav {
+        &_nav {
 
             margin-top: 40px;
 
@@ -204,6 +259,7 @@
                 gap: 60px;
             }
         }
+
         &_top {
             .header_logo {
                 width: 150px;
