@@ -49,7 +49,7 @@
         top: 0px;
         right: 0;
         width: 100%;
-        height: 40%;
+        height: 20vh;
         background-color: $light;
         border-radius: 0 0 10px 10px;
         transition: ease-in-out 0.3s;
@@ -57,21 +57,9 @@
         opacity: 1;
         z-index: 3;
 
-
-        .burger {
-            position: relative;
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-            margin-right: 20px;
-            z-index: 1;
-        }
-
-        .btn-burger {
-            display: flex;
-            position: fixed;
-            top: 40px;
-            right: 15px;
+        .btn-burger{
+            top: 50px;
+            right: 60px;
 
             span {
                 display: block;
@@ -109,7 +97,7 @@
         justify-items: center;
         gap: 25px;
         list-style-type: none;
-        padding: 45px 0px 0 0px;
+        padding: 85px 0px 0 0px;
 
         li {
             a {
@@ -128,12 +116,11 @@
 }
 
 .burger {
-    position: relative;
     cursor: pointer;
     width: 20px;
     height: 20px;
     margin-right: 20px;
-    z-index: 1;
+    z-index: 3;
 }
 
 
@@ -154,28 +141,29 @@
     }
 
     span:first-child {
-        transform: rotate(-45deg);
+        transform: rotate(0deg);
         position: absolute;
-        top: 50%;
+        top: 10%;
         left: 0px;
     }
 
     span:nth-child(2) {
-        opacity: 0;
-        transition: ease;
+        position: absolute;
+        top: 50%;
     }
 
     span:last-child {
-        transform: rotate(45deg);
+        transform: rotate(0deg);
         position: absolute;
-        top: 50%;
+        top: 90%;
         left: 0px;
     }
 
 }
 
 
-.btn-burger.hidden {
+
+.btn-burger {
     margin: 0;
 
     span:first-child {
@@ -218,6 +206,11 @@
             display: block;
             transform: none;
             box-shadow: none;
+            height: auto;
+
+            .btn-burger {
+                display: none;
+            }
 
             ul {
                 padding-top: 20px;
@@ -225,10 +218,6 @@
                 padding-left: 0;
                 justify-content: center;
                 gap: 30px;
-
-                li {
-                    list-style: none;
-                }
             }
         }
 

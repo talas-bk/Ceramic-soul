@@ -97,17 +97,17 @@ if (form) {
 const btnBurger = document.querySelector(".burger");
 const sideBurger = document.querySelector(".header_nav");
 const overlay = document.querySelector(".overlay");
-const navBtn = document.getElementById("nav-btn");
+const navBtn = document.getElementById("nav-btn")
 
 const addHiddens = function () {
   btnBurger.classList.toggle('hidden');
   sideBurger.classList.toggle("hidden");
   overlay.classList.toggle('remove');
-  navBtn.classList.toggle('remove');
-}
+  navBtn.classList.toggle('hidden')
+};
 
+navBtn.addEventListener('click',addHiddens);
 btnBurger.addEventListener("click", addHiddens);
-navBtn.addEventListener("click",addHiddens);
 overlay.addEventListener("click", addHiddens);
-sideBurger.addEventListener("click", addHiddens)
+// sideBurger.addEventListener("click", addHiddens)
 

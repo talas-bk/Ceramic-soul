@@ -3,14 +3,6 @@
 
 .about {
 
-   .header_nav {
-        height: 40%;
-
-        ul{
-            padding: 45px 0px 0 0px;
-        }
-   }
-
     padding-top:50px ;
 
     &_wrapper {
@@ -72,16 +64,8 @@
 @media screen and (min-width:768px) {
      
 .about {
-
-    .header_nav{
-        position: unset;
-
-        ul {
-            padding: 0;
-        }
-    }
-
-        &_wrapper {
+  
+    &_wrapper {
             margin-top: 60px;
             gap: 58px;
         }
@@ -105,15 +89,15 @@
         &_beganBio {
            flex-direction: unset;
            align-items: start;
-        //    justify-content: space-between;
+           justify-content: space-between;
 
            img {
-            width: 550px;
+            width: 470px;
             height: 370px;
            }
 
          .textBio {
-            width: 570px;
+            width: 470px;
             margin-top: 0;
          }
         }

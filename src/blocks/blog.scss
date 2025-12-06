@@ -3,13 +3,6 @@
 
 .blog {
 
-  .header_nav {
-    height: 40%;
-
-    ul {
-      padding: 45px 0px 0 0px;
-    }
-  }
 
   &__text {
     letter-spacing: clamp(0.5px, 5vw, 0px);
