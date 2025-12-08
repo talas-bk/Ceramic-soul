@@ -70,22 +70,8 @@
         background-color: $veryLight;
     }
 
-    input {
-        &:active{
-           border-color:$request;
-        }
-        &:focus {
-           border-color:$ui-error;
-        }
-    }
-
-    input::placeholder{
-        color: $ui-disabled;
-    }
-
 
     textarea::placeholder {
-        color: $ui-disabled;
         font-size: 15px;
     }
 

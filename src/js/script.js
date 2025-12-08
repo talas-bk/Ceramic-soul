@@ -98,12 +98,12 @@ const btnBurger = document.querySelector(".burger");
 const sideBurger = document.querySelector(".header_nav");
 const overlay = document.querySelector(".overlay");
 const navBtn = document.getElementById("nav-btn")
+const spanbtn = document.querySelector(".btn-burger")
 
 const addHiddens = function () {
-  btnBurger.classList.toggle('hidden');
   sideBurger.classList.toggle("hidden");
   overlay.classList.toggle('remove');
-  navBtn.classList.toggle('hidden')
+  spanbtn.classList.toggle("transform")
 };
 
 navBtn.addEventListener('click',addHiddens);

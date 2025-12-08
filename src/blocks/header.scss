@@ -3,19 +3,23 @@
 .header {
 
     &_top {
-        display: flex;
+        // position: fixed;
+        // width:85%;
+        // top: 40px;
+        display:flex;
         justify-content: space-between;
     }
 
     &_logo {
+        margin-right: 20px;
         width: clamp(90px, 5vw, 100px);
         height: clamp(90px, 5vw, 100px);
     }
 
     &_icons {
-        display: flex;
+        display:flex;
         align-items: start;
-        gap: 15px;
+        gap: 10px;
 
         a {
             display: block;
@@ -34,33 +38,38 @@
         transform: scaleX(-1);
     }
 
-    &_nav.hidden {
+    &_nav.hidden{
         opacity: 0.4;
         transform: translatey(-100%);
-        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3)
+        box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3);
+        height: 50%;
     }
 
     &_nav {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        position: absolute;
         position: fixed;
-        top: 0px;
+        top: 0;
         right: 0;
         width: 100%;
-        height: 50vh;
         background-color: $light;
         border-radius: 0 0 10px 10px;
         transition: ease-in-out 0.3s;
         transform: translatey(0%);
         opacity: 1;
         z-index: 3;
+        padding-bottom: 50px;
 
-        .btn-burger{
-            top: 50px;
-            right: 60px;
-
+  .burger {
+    position:absolute;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+   }
+     
+   .btn-burger{
+          
             span {
                 display: block;
                 width: 20px;
@@ -97,7 +106,7 @@
         justify-items: center;
         gap: 25px;
         list-style-type: none;
-        padding: 85px 0px 0 0px;
+        padding: 100px 0px 0 0px;
 
         li {
             a {
@@ -116,28 +125,20 @@
 }
 
 .burger {
+    position: relative;
+    width: 23px;
+    height: 23px;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-    z-index: 3;
 }
 
 
 .btn-burger {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    height: 23px;
-    margin-right: 20px;
-    cursor: pointer;
 
     span {
-        display: block;
         width: 20px;
         height: 1px;
         background-color: $dark;
-        transition: ease-in-out 0.1s;
+        transition: ease-in-out 0.2s;
     }
 
     span:first-child {
@@ -163,28 +164,26 @@
 
 
 
-.btn-burger {
+.transform{
     margin: 0;
 
     span:first-child {
-        transform: rotate(0deg);
+        transform: rotate(45deg);
         position: absolute;
-        top: 10%;
-        left: 0px;
+        top: 10px;
+        left: 0;
     }
 
     span:nth-child(2) {
-        opacity: 1;
+        opacity: 0;
         transition: ease-out 0.1s;
-        position: absolute;
-        top: 50%;
     }
 
     span:last-child {
-        transform: rotate(0deg);
+        transform: rotate(-45deg);
         position: absolute;
-        top: 90%;
-        left: 0px;
+        top: 10px;
+        left: 0;
         opacity: 1;
     }
 }
