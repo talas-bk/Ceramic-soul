@@ -1,7 +1,8 @@
-
+'use strick'
 import JustValidate from "just-validate";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+// import { SupabaseClient } from "@supabase/supabase-js";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -41,6 +42,7 @@ const swiper = new Swiper('.swiper', {
  
 });
 
+// const supabase = createClient('https://xyzcompany.supabase.co', 'publishable-or-anon-key')
 
 // Form validation
 const form = document.querySelector('#form');
@@ -111,3 +113,71 @@ btnBurger.addEventListener("click", addHiddens);
 overlay.addEventListener("click", addHiddens);
 // sideBurger.addEventListener("click", addHiddens)
 
+
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+// Sections Appears Smooth
+
+const sections = document.querySelectorAll('.section');
+
+const observerFunc = function (entry, observ) {
+
+  const entryCall = entry[0];
+     if (!entryCall.isIntersecting)return;{
+      entryCall.target.classList.remove('show')
+      observ.unobserve(entryCall.target)
+     }
+}
+
+
+const observer = new IntersectionObserver(observerFunc, {
+  root:null,
+  threshold:0.2,
+  
+});
+
+sections.forEach( function (section) {
+      observer.observe(section);
+      section.classList.add('show')
+})
+
+//////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+
+// Tabs on Card
+
+const contentCards = document.querySelectorAll('.cards_wrapper');
+const contentTabs = document.querySelectorAll('.menu_link');
+const conteinerTabs = document.querySelector('.menu-tabs')
+
+// function selectItem() {
+//   removeBorder()
+//   cardRemove()
+//   this.classList.add('tab-border');
+//   const cardTab = document.querySelector(`#${this.id}-content`);
+//   cardTab.classList.add('show-card');
+// }
+
+// function cardRemove () {
+//   contentCards.forEach( tabs => tabs.classList.remove('show-card'))
+// }
+
+// function removeBorder () {
+//   contentTabs.forEach( tabs => tabs.classList.remove('tab-border'))
+// }
+
+// contentTabs.forEach( tabs => tabs.addEventListener('click', selectItem))
+
+conteinerTabs.addEventListener('click',function (el) {
+  const closestTab = el.target.closest('.menu_link')
+     if (closestTab)
+      contentTabs.forEach( tab => tab.classList.remove('tab-border'));
+      closestTab.classList.add('tab-border');
+
+      contentCards.forEach(cont => cont.classList.remove('show-card'))
+      document.querySelector(`.tab-content--${closestTab.dataset.talas}`).classList.add('show-card')
+    });
+
+    

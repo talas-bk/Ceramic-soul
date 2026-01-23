@@ -3,7 +3,6 @@
 
 .blog {
 
-
   &__text {
     letter-spacing: clamp(0.5px, 5vw, 0px);
   }
@@ -19,6 +18,7 @@
     font-size: clamp(22px, 5vw, 28px);
     text-transform: uppercase;
     margin: 40px;
+    animation: scaleIn 1.2s;
   }
 
   &__img {
@@ -27,6 +27,9 @@
     transform: translateX(-1px) translateY(-1px);
   }
 
+  &__wrapper {
+    animation: scaleIn 1.2s;
+  }
 }
 
 @media screen and (min-width:768px) {
@@ -89,6 +92,10 @@
 
     &__notes:hover {
       transform: scale(1.03);
+    }
+
+    .header_nav {
+      padding-bottom: 0;
     }
   }
 

@@ -3,11 +3,15 @@
 
 .cards {
      margin: 0 auto;
+        
+    animation: scaleIn 1.2s;
+
+
     .container {
         justify-content: center;
         display: grid;
-
     }
+
     &_item {
         width:100%;
         border-radius: 3px;
@@ -25,11 +29,37 @@
         }
     }
     &_wrapper {
-        display:grid;
-        justify-content: center;
-        gap: 30px;
+      display:grid;
+      justify-content: center;
+      gap: 30px;
     }
 }
+
+.tab-content--1,
+.tab-content--2,
+.tab-content--3 {
+    display: none;
+}
+
+
+ .show-card {
+     display:grid !important;
+     justify-content: center;
+     gap: 30px;
+    animation: scaleInner .7s;
+
+@keyframes scaleInner {
+    from {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-0px);
+        opacity: 1;
+    }
+}
+
+ }
 
 @media screen and (min-width:768px) {
 
@@ -40,6 +70,7 @@
             gap: 30px;
             padding: 10px;
             position: relative;
+
             &::after {
                 content: "";
                 position: absolute;
@@ -49,6 +80,7 @@
                 height: 1.5px;
                 background-color: $dark;
             }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -57,7 +89,6 @@
                 width: 0.8px;
                 height: 200px;
                 background-color: $dark;
-
             }
         }
 
